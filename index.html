@@ -34,7 +34,6 @@
             position: relative;
         }
         
-        /* Background effects */
         .bg-grid {
             position: fixed;
             top: 0;
@@ -74,7 +73,6 @@
             }
         }
         
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -133,7 +131,6 @@
             width: 100%;
         }
         
-        /* Hero Section */
         .hero {
             height: 100vh;
             display: flex;
@@ -424,7 +421,6 @@
             font-size: 1.2rem;
         }
         
-        /* Skills Section */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -637,7 +633,6 @@
             color: var(--primary-color);
         }
         
-        /* Education Section */
         .education-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -677,7 +672,6 @@
             opacity: 0.7;
         }
         
-        /* Certifications Section */
         .certifications-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -717,7 +711,6 @@
             opacity: 0.7;
         }
         
-        /* Contact Section */
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -808,7 +801,6 @@
             box-shadow: 0 10px 20px rgba(0, 255, 255, 0.4);
         }
         
-        /* Footer */
         footer {
             padding: 30px 50px;
             background: rgba(10, 10, 15, 0.9);
@@ -843,7 +835,6 @@
             box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
         }
         
-        /* Responsive Design */
         @media (max-width: 768px) {
             nav {
                 padding: 15px 20px;
@@ -882,7 +873,6 @@
             }
         }
         
-        /* Loading animation */
         .loader {
             position: fixed;
             top: 0;
@@ -919,16 +909,13 @@
     </style>
 </head>
 <body>
-    <!-- Loading Screen -->
     <div class="loader" id="loader">
         <div class="loader-circle"></div>
     </div>
     
-    <!-- Background Effects -->
     <div class="bg-grid"></div>
     <div class="digital-rain" id="digitalRain"></div>
     
-    <!-- Navigation -->
     <nav>
         <div class="logo">FAYYAS.NM</div>
         <ul class="nav-links">
@@ -942,7 +929,6 @@
         </ul>
     </nav>
     
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <h1 class="glitch" data-text="MOHAMMED FAYYAS NM">MOHAMMED FAYYAS NM</h1>
         <p class="hero-subtitle">Data Analytics | Machine Learning | Cloud Computing</p>
@@ -952,7 +938,6 @@
         </div>
     </section>
     
-    <!-- About Section -->
     <section id="about">
         <h2 class="section-title">ABOUT ME</h2>
         <div class="about-container">
@@ -990,7 +975,6 @@
         </div>
     </section>
     
-    <!-- Education Section -->
     <section id="education">
         <h2 class="section-title">EDUCATION</h2>
         <div class="education-container">
@@ -1009,7 +993,6 @@
         </div>
     </section>
     
-    <!-- Skills Section -->
     <section id="skills">
         <h2 class="section-title">TECHNICAL SKILLS</h2>
         <div class="skills-container">
@@ -1093,7 +1076,6 @@
         </div>
     </section>
     
-    <!-- Projects Section -->
     <section id="projects">
         <h2 class="section-title">PROJECTS</h2>
         <div class="projects-container">
@@ -1194,7 +1176,6 @@
         </div>
     </section>
     
-    <!-- Certifications Section -->
     <section id="certifications">
         <h2 class="section-title">CERTIFICATIONS</h2>
         <div class="certifications-container">
@@ -1230,7 +1211,6 @@
         </div>
     </section>
     
-    <!-- Awards Section -->
     <section id="awards">
         <h2 class="section-title">AWARDS & MEMBERSHIPS</h2>
         <div class="education-container">
@@ -1248,7 +1228,6 @@
         </div>
     </section>
     
-    <!-- Contact Section -->
     <section id="contact">
         <h2 class="section-title">CONNECT TO THE MATRIX</h2>
         <div class="contact-container">
@@ -1305,7 +1284,6 @@
         </div>
     </section>
     
-    <!-- Footer -->
     <footer>
         <div class="social-links">
             <a href="https://github.com/sharpentine" class="social-link" target="_blank">
@@ -1328,7 +1306,6 @@
     </footer>
     
     <script>
-        // Digital Rain Effect
         function createDigitalRain() {
             const rainContainer = document.getElementById('digitalRain');
             const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
@@ -1352,7 +1329,6 @@
             }
         }
         
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1366,26 +1342,21 @@
             });
         });
         
-        // Hide loader when page is fully loaded
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('loader').classList.add('hidden');
             }, 1000);
         });
         
-        // Form submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             
-            // Here you would normally send the data to a server
             console.log('Form submitted:', { name, email, message });
             
-            // Show success message
             const formContainer = this;
             const originalContent = formContainer.innerHTML;
             formContainer.innerHTML = `
@@ -1419,19 +1390,15 @@
                 <button type="submit" class="submit-btn">Send Message</button>
             `;
             
-            // Re-attach event listener
             document.getElementById('contactForm').addEventListener('submit', function(e) {
                 e.preventDefault();
                 
-                // Get form values
                 const name = document.getElementById('name').value;
                 const email = document.getElementById('email').value;
                 const message = document.getElementById('message').value;
                 
-                // Here you would normally send the data to a server
                 console.log('Form submitted:', { name, email, message });
                 
-                // Show success message
                 const formContainer = this;
                 formContainer.innerHTML = `
                     <div style="text-align: center; padding: 40px 20px;">
@@ -1444,16 +1411,13 @@
             });
         }
         
-        // Initialize digital rain effect
         createDigitalRain();
         
-        // Re-create digital rain on window resize
         window.addEventListener('resize', () => {
             document.getElementById('digitalRain').innerHTML = '';
             createDigitalRain();
         });
         
-        // Add active class to navigation based on scroll position
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-links a');
@@ -1478,3 +1442,4 @@
 </body>
 
 </html>
+
